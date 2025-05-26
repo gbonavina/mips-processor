@@ -1,0 +1,104 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/OficinaModelsim/modelsim_aoc/simulation
+vBancoDeRegistradores
+!s110 1748229026
+!i10b 1
+!s100 Ca?Ph>eA_^h5iBKKf_G[_1
+IOZnEK>Z077nWR3Nj231Z33
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/LABAOC/ModelSim/simulation
+w1748023786
+8C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
+FC:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1748229026.000000
+!s107 C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@banco@de@registradores
+vBancoDeRegistradores_test
+Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1748229540
+!i10b 1
+!s100 XeD04?F_WX[WoQ2?hEN[:3
+IReeX[:c0SOcS<Ri31BnFB1
+R0
+!s105 BancoDeRegistradores_test_sv_unit
+S1
+R1
+w1748229502
+8C:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv
+FC:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1748229539.000000
+!s107 C:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv|
+!i113 1
+Z6 o-work work -sv
+R4
+n@banco@de@registradores_test
+vULA
+Z7 !s110 1748231080
+!i10b 1
+!s100 0j0aK5Q4dgMe8b8eBG=n22
+I=koDYXJH2_VoF1`hV?17O2
+R0
+R1
+w1748226741
+8C:/LABAOC/ModelSim/simulation/ULA.v
+FC:/LABAOC/ModelSim/simulation/ULA.v
+L0 1
+R2
+r1
+!s85 0
+31
+Z8 !s108 1748231080.000000
+!s107 C:/LABAOC/ModelSim/simulation/ULA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/simulation/ULA.v|
+!i113 1
+R3
+R4
+n@u@l@a
+vULA_test
+R5
+R7
+!i10b 1
+!s100 @8IB9D31=kJHMU_heNJ962
+I^OJ7XlPdTHI6mTKA?fkDC3
+R0
+!s105 ULA_test_sv_unit
+S1
+R1
+w1748230945
+8C:/LABAOC/ModelSim/simulation/ULA_test.sv
+FC:/LABAOC/ModelSim/simulation/ULA_test.sv
+L0 1
+R2
+r1
+!s85 0
+31
+R8
+!s107 C:/LABAOC/ModelSim/simulation/ULA_test.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/LABAOC/ModelSim/simulation/ULA_test.sv|
+!i113 1
+R6
+R4
+n@u@l@a_test
