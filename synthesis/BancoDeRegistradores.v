@@ -21,6 +21,10 @@ module BancoDeRegistradores(RS, RT, RD, SPIn, DadoEscrito, RegWrite, NOP, StackO
 	parameter Zero = 6'd0;
 	parameter ra   = 6'd1;
 	parameter SP   = 6'd2;
+
+	initial begin
+		regs[SP] = 32'd111;
+	end
 		
 	// a escrita deve ser feita na subida do clock
 	always @ (posedge clock) begin 
