@@ -7,7 +7,13 @@ module ProgramCounter(pc_in, pc_out, halt, clk);
     reg [31:0] pc;
 
     always @ (posedge clk) begin
-        pc <= pc_in;
+        if (halt) begin
+            pc <= pc;
+        end
+        else begin
+            pc <= pc_in;
+        end
+
     end
 
 

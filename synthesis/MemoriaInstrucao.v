@@ -2,7 +2,7 @@
 // Single Port ROM
 
 module MemoriaInstrucao
-#(parameter DATA_WIDTH=8, parameter ADDR_WIDTH=8)
+#(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=8)
 (
 	input [(ADDR_WIDTH-1):0] pc_addr,
 	output reg [(DATA_WIDTH-1):0] q

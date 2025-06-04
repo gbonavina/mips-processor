@@ -22,7 +22,7 @@ module ProcessadorFinal(
         .RS             (RS),
         .RT             (RT),
         .RD             (RD),
-        .SPIn           (32d'111),
+        .SPIn           (SPIn),
         .DadoEscrito    (DadoEscrito),
         .RegWrite       (RegWrite),
         .NOP            (NOP),
@@ -47,8 +47,8 @@ module ProcessadorFinal(
     wire [31:0] mux_dado_ula;
 
     Mux mux_dadoUlaInput (
-        .a      (dado2),
-        .b      (dado1),
+        .a      (mux_zero_dado1),
+        .b      (dado2),
         .s      (ULAData),
         .out    (mux_dado_ula)
     );
