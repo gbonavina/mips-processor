@@ -9,42 +9,42 @@ z2
 cModel Technology
 dC:/OficinaModelsim/modelsim_aoc/simulation
 vBancoDeRegistradores
-!s110 1748229026
+Z0 !s110 1749167586
 !i10b 1
-!s100 Ca?Ph>eA_^h5iBKKf_G[_1
-IOZnEK>Z077nWR3Nj231Z33
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 dC:/LABAOC/ModelSim/simulation
-w1748023786
-8C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
-FC:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
+!s100 0M>cAJKL8T<3boeDOILU?0
+I`WQkbV3A7lI>1VFI63:<C0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/LABAOC/ModelSim/simulation
+w1749156443
+8C:/LABAOC/Processador Final/BancoDeRegistradores.v
+FC:/LABAOC/Processador Final/BancoDeRegistradores.v
 L0 1
-Z2 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1748229026.000000
-!s107 C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v|
+Z4 !s108 1749167586.000000
+!s107 C:/LABAOC/Processador Final/BancoDeRegistradores.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/Processador Final/BancoDeRegistradores.v|
 !i113 1
-Z3 o-work work
-Z4 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 n@banco@de@registradores
 vBancoDeRegistradores_test
-Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z7 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 !s110 1748229540
 !i10b 1
 !s100 XeD04?F_WX[WoQ2?hEN[:3
 IReeX[:c0SOcS<Ri31BnFB1
-R0
+R1
 !s105 BancoDeRegistradores_test_sv_unit
 S1
-R1
+R2
 w1748229502
 8C:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv
 FC:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv
 L0 1
-R2
+R3
 r1
 !s85 0
 31
@@ -52,53 +52,119 @@ r1
 !s107 C:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/LABAOC/ModelSim/testbenches/BancoDeRegistradores_test.sv|
 !i113 1
-Z6 o-work work -sv
-R4
+Z8 o-work work -sv
+R6
 n@banco@de@registradores_test
-vULA
-Z7 !s110 1748231080
-!i10b 1
-!s100 0j0aK5Q4dgMe8b8eBG=n22
-I=koDYXJH2_VoF1`hV?17O2
+vMux
 R0
+!i10b 1
+!s100 JP@bfW<^=8``fiV4nihBY0
+ImEA_cAEDLk?dMho3UdOgb2
 R1
-w1748226741
-8C:/LABAOC/ModelSim/simulation/ULA.v
-FC:/LABAOC/ModelSim/simulation/ULA.v
-L0 1
 R2
+w1748454436
+8C:/LABAOC/Processador Final/Mux.v
+FC:/LABAOC/Processador Final/Mux.v
+L0 1
+R3
 r1
 !s85 0
 31
-Z8 !s108 1748231080.000000
-!s107 C:/LABAOC/ModelSim/simulation/ULA.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/simulation/ULA.v|
-!i113 1
-R3
 R4
+!s107 C:/LABAOC/Processador Final/Mux.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/Processador Final/Mux.v|
+!i113 1
+R5
+R6
+n@mux
+vProcessadorFinal
+R0
+!i10b 1
+!s100 Fc5IXn>]T9bke7]1eJmEA0
+I4NO^4dH9[;zM4ZHHVaB4m3
+R1
+R2
+w1749167303
+8C:/LABAOC/Processador Final/ProcessadorFinal.v
+FC:/LABAOC/Processador Final/ProcessadorFinal.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/Processador Final/ProcessadorFinal.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/Processador Final/ProcessadorFinal.v|
+!i113 1
+R5
+R6
+n@processador@final
+vtb_ProcessadorFinal
+R0
+!i10b 1
+!s100 ln`ai:^zOege;EUQ85mSo0
+INzL@>Ddn2L55>=_XfLFKS1
+R1
+R2
+w1749167582
+8C:\LABAOC\ModelSim\simulation\tb_ProcessadorFinal.v
+FC:\LABAOC\ModelSim\simulation\tb_ProcessadorFinal.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:\LABAOC\ModelSim\simulation\tb_ProcessadorFinal.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\LABAOC\ModelSim\simulation\tb_ProcessadorFinal.v|
+!i113 1
+R5
+R6
+ntb_@processador@final
+vULA
+R0
+!i10b 1
+!s100 0j0aK5Q4dgMe8b8eBG=n22
+IB=oKNG_hLVP2DQUzTVj:g1
+R1
+R2
+w1748226741
+8C:/LABAOC/Processador Final/ULA.v
+FC:/LABAOC/Processador Final/ULA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/Processador Final/ULA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/Processador Final/ULA.v|
+!i113 1
+R5
+R6
 n@u@l@a
 vULA_test
-R5
 R7
+!s110 1748231080
 !i10b 1
 !s100 @8IB9D31=kJHMU_heNJ962
 I^OJ7XlPdTHI6mTKA?fkDC3
-R0
+R1
 !s105 ULA_test_sv_unit
 S1
-R1
+R2
 w1748230945
 8C:/LABAOC/ModelSim/simulation/ULA_test.sv
 FC:/LABAOC/ModelSim/simulation/ULA_test.sv
 L0 1
-R2
+R3
 r1
 !s85 0
 31
-R8
+!s108 1748231080.000000
 !s107 C:/LABAOC/ModelSim/simulation/ULA_test.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/LABAOC/ModelSim/simulation/ULA_test.sv|
 !i113 1
+R8
 R6
-R4
 n@u@l@a_test

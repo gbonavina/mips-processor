@@ -1,71 +1,72 @@
-# reading C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini
-# Loading project TestUla
-# Compile of ULA_test.sv was successful.
+# Compile of BancoDeRegistradores.v was successful.
+# Compile of Mux.v was successful.
+# Compile of ProcessadorFinal.v was successful.
 # Compile of ULA.v was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.ULA_test
-# vsim -gui work.ULA_test 
-# Start time: 00:45:17 on May 26,2025
-# Loading sv_std.std
-# Loading work.ULA_test
+# Compile of tb_ProcessadorFinal.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb_ProcessadorFinal
+# vsim -gui work.tb_ProcessadorFinal 
+# Start time: 20:53:21 on Jun 05,2025
+# Loading work.tb_ProcessadorFinal
+# Loading work.ProcessadorFinal
+# Loading work.BancoDeRegistradores
+# Loading work.Mux
 # Loading work.ULA
-add wave -position end sim:/ULA_test/u_ULA/*
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(27): [PCDPC] - Port size (32) does not match connection size (1) for port 'SPOut'. The port definition is at: C:/LABAOC/Processador Final/BancoDeRegistradores.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/u_BancoDeRegistradores File: C:/LABAOC/Processador Final/BancoDeRegistradores.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(46): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_zeroOrDado1 File: C:/LABAOC/Processador Final/Mux.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_dadoUlaInput File: C:/LABAOC/Processador Final/Mux.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_imediatoOrDado2 File: C:/LABAOC/Processador Final/Mux.v
+add wave -position end sim:/tb_ProcessadorFinal/*
 run -all
-# Time=0: ALUOp=xxxx X=         x Y=         x => ULARes=         x Zero=x
-# Test 0: ADD
-# Time=1: ALUOp=0000 X=        22 Y=       108 => ULARes=       130 Zero=0
-# Test 1: SUB
-# Time=11: ALUOp=0001 X=        22 Y=       108 => ULARes=4294967210 Zero=0
-# Test 2: MULT
-# Time=21: ALUOp=0010 X=        22 Y=       108 => ULARes=      2376 Zero=0
-# Test 3: DIV
-# Time=31: ALUOp=0011 X=       108 Y=        22 => ULARes=         4 Zero=0
-# Time=41: ALUOp=0011 X=        22 Y=       108 => ULARes=         0 Zero=0
-# Test 4: AND
-# Time=51: ALUOp=0100 X=        22 Y=       108 => ULARes=         4 Zero=0
-# Test 5: OR
-# Time=61: ALUOp=0101 X=        22 Y=       108 => ULARes=       126 Zero=0
-# Test 6: NOT
-# Time=71: ALUOp=0110 X=        22 Y=         0 => ULARes=4294967273 Zero=0
-# Test 7: SL (Shift Left)
-# Time=81: ALUOp=0111 X=        22 Y=         0 => ULARes=        44 Zero=0
-# Test 8: SR (Shift Right)
-# Time=91: ALUOp=1000 X=        22 Y=         0 => ULARes=        11 Zero=0
-# Test 9: SLT (Set Less Than)
-# Time=101: ALUOp=1001 X=        22 Y=       108 => ULARes=         1 Zero=0
-# Time=111: ALUOp=1001 X=       108 Y=        22 => ULARes=         0 Zero=0
-# Time=121: ALUOp=1001 X=        50 Y=        50 => ULARes=         0 Zero=0
-# Test 10: BEQ (Branch if Equal)
-# Time=131: ALUOp=1010 X=        22 Y=       108 => ULARes=         0 Zero=0
-# Time=141: ALUOp=1010 X=        50 Y=        50 => ULARes=         0 Zero=1
-# Test 11: BNE (Branch if Not Equal)
-# Time=151: ALUOp=1011 X=        22 Y=       108 => ULARes=         0 Zero=1
-# Time=161: ALUOp=1011 X=        50 Y=        50 => ULARes=         0 Zero=0
-# Test 12: BGT (Branch if Greater Than)
-# Time=171: ALUOp=1100 X=       108 Y=        22 => ULARes=         0 Zero=1
-# Time=181: ALUOp=1100 X=        22 Y=       108 => ULARes=         0 Zero=0
-# Time=191: ALUOp=1100 X=        50 Y=        50 => ULARes=         0 Zero=0
-# Test 13: BLT (Branch if Less Than)
-# Time=201: ALUOp=1101 X=        22 Y=       108 => ULARes=         0 Zero=1
-# Time=211: ALUOp=1101 X=       108 Y=        22 => ULARes=         0 Zero=0
-# Time=221: ALUOp=1101 X=        50 Y=        50 => ULARes=         0 Zero=0
-# Test 14: BGE (Branch if Greater Than or Equal)
-# Time=231: ALUOp=1110 X=       108 Y=        22 => ULARes=         0 Zero=1
-# Time=241: ALUOp=1110 X=        50 Y=        50 => ULARes=         0 Zero=1
-# Time=251: ALUOp=1110 X=        22 Y=       108 => ULARes=         0 Zero=0
-# Test 15: BLE (Branch if Less Than or Equal)
-# Time=261: ALUOp=1111 X=        22 Y=       108 => ULARes=         0 Zero=1
-# Time=271: ALUOp=1111 X=        50 Y=        50 => ULARes=         0 Zero=1
-# Time=281: ALUOp=1111 X=       108 Y=        22 => ULARes=         0 Zero=0
-# Test Default: Invalid ALUOp
-# Todos os testes concluídos.
-# Time=291: ALUOp=xxxx X=       108 Y=        22 => ULARes=         0 Zero=0
-# ** Note: $finish    : C:/LABAOC/ModelSim/simulation/ULA_test.sv(191)
-#    Time: 311 ps  Iteration: 0  Instance: /ULA_test
-# 1
-# Break in Module ULA_test at C:/LABAOC/ModelSim/simulation/ULA_test.sv line 191
-# Printing not supported.
-# Unrecognized paper size (Letter), using Custom
-# Unrecognized paper size (Letter), using Custom
-# End time: 00:52:08 on May 26,2025, Elapsed time: 0:06:51
-# Errors: 3, Warnings: 0
+# === Teste 1: R[3] + R[4] ===
+#    R[3] = 10, R[4] = 20 → ULARes = x, Zero = 0
+# === Teste 2: R[3] + imediato(5) ===
+#    R[3] = 10, Imediato = 5 → ULARes = x, Zero = 0
+# Fim da simulação.
+# ** Note: $stop    : C:/LABAOC/ModelSim/simulation/tb_ProcessadorFinal.v(156)
+#    Time: 85 ns  Iteration: 0  Instance: /tb_ProcessadorFinal
+# Break in Module tb_ProcessadorFinal at C:/LABAOC/ModelSim/simulation/tb_ProcessadorFinal.v line 156
+# Break key hit
+quit -sim
+# End time: 21:01:00 on Jun 05,2025, Elapsed time: 0:07:39
+# Errors: 0, Warnings: 4
+vsim work.tb_ProcessadorFinal
+# vsim work.tb_ProcessadorFinal 
+# Start time: 21:01:04 on Jun 05,2025
+# Loading work.tb_ProcessadorFinal
+# Loading work.ProcessadorFinal
+# Loading work.BancoDeRegistradores
+# Loading work.Mux
+# Loading work.ULA
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(27): [PCDPC] - Port size (32) does not match connection size (1) for port 'SPOut'. The port definition is at: C:/LABAOC/Processador Final/BancoDeRegistradores.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/u_BancoDeRegistradores File: C:/LABAOC/Processador Final/BancoDeRegistradores.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(46): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_zeroOrDado1 File: C:/LABAOC/Processador Final/Mux.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_dadoUlaInput File: C:/LABAOC/Processador Final/Mux.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_imediatoOrDado2 File: C:/LABAOC/Processador Final/Mux.v
+quit -sim
+# End time: 21:01:38 on Jun 05,2025, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 4
+vsim work.ProcessadorFinal
+# vsim work.ProcessadorFinal 
+# Start time: 21:01:41 on Jun 05,2025
+# Loading work.ProcessadorFinal
+# Loading work.BancoDeRegistradores
+# Loading work.Mux
+# Loading work.ULA
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(27): [PCDPC] - Port size (32) does not match connection size (1) for port 'SPOut'. The port definition is at: C:/LABAOC/Processador Final/BancoDeRegistradores.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/u_BancoDeRegistradores File: C:/LABAOC/Processador Final/BancoDeRegistradores.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(46): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/mux_zeroOrDado1 File: C:/LABAOC/Processador Final/Mux.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/mux_dadoUlaInput File: C:/LABAOC/Processador Final/Mux.v
+# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/mux_imediatoOrDado2 File: C:/LABAOC/Processador Final/Mux.v
+# End time: 21:29:43 on Jun 05,2025, Elapsed time: 0:28:02
+# Errors: 0, Warnings: 4

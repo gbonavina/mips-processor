@@ -41,7 +41,7 @@ module BancoDeRegistradores(RS, RT, RD, SPIn, DadoEscrito, RegWrite, NOP, StackO
 		
 		
 		if (JAL) begin
-			regs[JAL] = DadoEscrito;		
+			regs[ra] = DadoEscrito;		
 		end
 	
 	end
