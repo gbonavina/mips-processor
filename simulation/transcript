@@ -1,72 +1,28 @@
-# Compile of BancoDeRegistradores.v was successful.
-# Compile of Mux.v was successful.
-# Compile of ProcessadorFinal.v was successful.
-# Compile of ULA.v was successful.
-# Compile of tb_ProcessadorFinal.v was successful.
-# 5 compiles, 0 failed with no errors.
-vsim -gui work.tb_ProcessadorFinal
-# vsim -gui work.tb_ProcessadorFinal 
-# Start time: 20:53:21 on Jun 05,2025
-# Loading work.tb_ProcessadorFinal
-# Loading work.ProcessadorFinal
-# Loading work.BancoDeRegistradores
-# Loading work.Mux
-# Loading work.ULA
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(27): [PCDPC] - Port size (32) does not match connection size (1) for port 'SPOut'. The port definition is at: C:/LABAOC/Processador Final/BancoDeRegistradores.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/u_BancoDeRegistradores File: C:/LABAOC/Processador Final/BancoDeRegistradores.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(46): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_zeroOrDado1 File: C:/LABAOC/Processador Final/Mux.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_dadoUlaInput File: C:/LABAOC/Processador Final/Mux.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_imediatoOrDado2 File: C:/LABAOC/Processador Final/Mux.v
-add wave -position end sim:/tb_ProcessadorFinal/*
-run -all
-# === Teste 1: R[3] + R[4] ===
-#    R[3] = 10, R[4] = 20 → ULARes = x, Zero = 0
-# === Teste 2: R[3] + imediato(5) ===
-#    R[3] = 10, Imediato = 5 → ULARes = x, Zero = 0
-# Fim da simulação.
-# ** Note: $stop    : C:/LABAOC/ModelSim/simulation/tb_ProcessadorFinal.v(156)
-#    Time: 85 ns  Iteration: 0  Instance: /tb_ProcessadorFinal
-# Break in Module tb_ProcessadorFinal at C:/LABAOC/ModelSim/simulation/tb_ProcessadorFinal.v line 156
-# Break key hit
-quit -sim
-# End time: 21:01:00 on Jun 05,2025, Elapsed time: 0:07:39
-# Errors: 0, Warnings: 4
-vsim work.tb_ProcessadorFinal
-# vsim work.tb_ProcessadorFinal 
-# Start time: 21:01:04 on Jun 05,2025
-# Loading work.tb_ProcessadorFinal
-# Loading work.ProcessadorFinal
-# Loading work.BancoDeRegistradores
-# Loading work.Mux
-# Loading work.ULA
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(27): [PCDPC] - Port size (32) does not match connection size (1) for port 'SPOut'. The port definition is at: C:/LABAOC/Processador Final/BancoDeRegistradores.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/u_BancoDeRegistradores File: C:/LABAOC/Processador Final/BancoDeRegistradores.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(46): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_zeroOrDado1 File: C:/LABAOC/Processador Final/Mux.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_dadoUlaInput File: C:/LABAOC/Processador Final/Mux.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_ProcessadorFinal/DUT/mux_imediatoOrDado2 File: C:/LABAOC/Processador Final/Mux.v
-quit -sim
-# End time: 21:01:38 on Jun 05,2025, Elapsed time: 0:00:34
-# Errors: 0, Warnings: 4
-vsim work.ProcessadorFinal
-# vsim work.ProcessadorFinal 
-# Start time: 21:01:41 on Jun 05,2025
-# Loading work.ProcessadorFinal
-# Loading work.BancoDeRegistradores
-# Loading work.Mux
-# Loading work.ULA
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(27): [PCDPC] - Port size (32) does not match connection size (1) for port 'SPOut'. The port definition is at: C:/LABAOC/Processador Final/BancoDeRegistradores.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/u_BancoDeRegistradores File: C:/LABAOC/Processador Final/BancoDeRegistradores.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(46): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/mux_zeroOrDado1 File: C:/LABAOC/Processador Final/Mux.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/mux_dadoUlaInput File: C:/LABAOC/Processador Final/Mux.v
-# ** Warning: (vsim-3015) C:/LABAOC/Processador Final/ProcessadorFinal.v(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'out'. The port definition is at: C:/LABAOC/Processador Final/Mux.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /ProcessadorFinal/mux_imediatoOrDado2 File: C:/LABAOC/Processador Final/Mux.v
-# End time: 21:29:43 on Jun 05,2025, Elapsed time: 0:28:02
-# Errors: 0, Warnings: 4
+vlog ProgramCounter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:46 on Jun 11,2025
+# vlog -reportprogress 300 ProgramCounter.v 
+# ** Error: (vlog-7) Failed to open design unit file "ProgramCounter.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 18:11:46 on Jun 11,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+vlog ProgramCounter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:12:26 on Jun 11,2025
+# vlog -reportprogress 300 ProgramCounter.v 
+# ** Error: (vlog-7) Failed to open design unit file "ProgramCounter.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 18:12:26 on Jun 11,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/vlog failed.
+ls
+# ImplementacaoSemUC.cr.mti  TestUla.mpf   tb_ProcessadorFinal.v     testImplementacao.mpf  
+# ImplementacaoSemUC.mpf     ULA.v         tb_ProcessadorFinal.vcd   transcript             
+# TestProcessador.cr.mti     ULA_test.sv   tese_so_do_pc.v           vsim.wlf               
+# TestProcessador.mpf        codigo.txt    tese_so_do_pc.v.bak                              
+# TestUla.cr.mti             modelsim.ini  testImplementacao.cr.mti                         
+# 
+# work:
+# _info  _lib.qdb  _lib1_0.qdb  _lib1_0.qpg  _lib1_0.qtl  _vmake                
+cd .. 

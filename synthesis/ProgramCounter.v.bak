@@ -5,12 +5,12 @@ module ProgramCounter(pc_in, pc_out, halt, reset, clk);
     input clk;
     output [31:0] pc_out;
 
-    reg [31:0] pc;
+    reg [31:0] pc = 32'd0;
 
     always @ (posedge clk) begin
-        if (reset) begin
-             pc <= 32'b0; 
-        end
+        // if (reset) begin
+        //     pc <= 32'b0; 
+        // end
 
         else if (halt) begin
             pc <= pc;

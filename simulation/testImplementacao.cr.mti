@@ -1,16 +1,16 @@
-{C:/LABAOC/Processador Final/ULA.v} {1 {vlog -work work -stats=none {C:/LABAOC/Processador Final/ULA.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ULA
-
-Top level modules:
-	ULA
-
-} {} {}} {C:/LABAOC/Processador Final/BancoDeRegistradores.v} {1 {vlog -work work -stats=none {C:/LABAOC/Processador Final/BancoDeRegistradores.v}
+{C:/LABAOC/Processador Final/BancoDeRegistradores.v} {1 {vlog -work work -stats=none {C:/LABAOC/Processador Final/BancoDeRegistradores.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module BancoDeRegistradores
 
 Top level modules:
 	BancoDeRegistradores
+
+} {} {}} {C:/LABAOC/Processador Final/ULA.v} {1 {vlog -work work -stats=none {C:/LABAOC/Processador Final/ULA.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ULA
+
+Top level modules:
+	ULA
 
 } {} {}} C:/LABAOC/ModelSim/simulation/tb_ProcessadorFinal.v {1 {vlog -work work -stats=none {C:\LABAOC\ModelSim\simulation\tb_ProcessadorFinal.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

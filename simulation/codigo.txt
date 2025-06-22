@@ -1,0 +1,26 @@
+// Endereço 0: LI R3, 50      (Formato MEM: op, rd, im20)
+0110100000110000000000000110010
+
+// Endereço 1: LI R4, 100     (Formato MEM: op, rd, im20)
+0110100001000000000000001100100
+
+// Endereço 2: STORE R4, 15   (Formato MEM: op, rs, endereço)
+0010110001000000000000000001111
+
+// Endereço 3: LOAD R7, 15    (Formato MEM: op, rd, endereço)
+0010100001110000000000000001111
+
+// Endereço 4: BEQ R4, R7, +2 (Salta 2 instruções para o endereço 7)
+01110100010000011100000000000010
+
+// Endereço 5: SLT R8, R4, R3 (PULADO PELO BEQ)
+00000000100000010000001100000000
+
+// Endereço 6: NOP            (Alvo do BEQ se o offset for +1)
+11111000000000000000000000000000
+
+// Endereço 7: SLT R9, R3, R4 (Alvo do BEQ com offset +2)
+00000000100100001100010000000000
+
+// Endereço 8: HALT
+11111100000000000000000000000000

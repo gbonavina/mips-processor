@@ -1,0 +1,271 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/LABAOC/ModelSim/simulation
+vadder
+Z1 !s110 1749675918
+!i10b 1
+!s100 [S1SlL>jgj^A<l]hjU?X40
+IIEjW`S51]F@ElzKZCSgVP2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1749661443
+8C:/LABAOC/ModelSim/synthesis/adder.v
+FC:/LABAOC/ModelSim/synthesis/adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1749675918.000000
+!s107 C:/LABAOC/ModelSim/synthesis/adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/adder.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vBancoDeRegistradores
+R1
+!i10b 1
+!s100 MRmhOAiDc5VdkDC6QX73O3
+I<ERcj[?haT_YVGR1`:E2l2
+R2
+R0
+w1749156415
+8C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
+FC:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v|
+!i113 1
+R5
+R6
+n@banco@de@registradores
+vExtensorSinal
+R1
+!i10b 1
+!s100 jHGZSB]^OM9BEf9bj5_3^2
+IoAZm[^]X^IZN?Ug3<KKG`2
+R2
+R0
+w1749671955
+8C:/LABAOC/ModelSim/synthesis/ExtensorSinal.v
+FC:/LABAOC/ModelSim/synthesis/ExtensorSinal.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/ModelSim/synthesis/ExtensorSinal.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/ExtensorSinal.v|
+!i113 1
+R5
+R6
+n@extensor@sinal
+vMemoriaDados
+R1
+!i10b 1
+!s100 nT6c1M>GU:1`z2nO0>1X01
+I]I<Yj@F2?@IeDYNd8QTnN1
+R2
+R0
+w1748628531
+8C:/LABAOC/ModelSim/synthesis/MemoriaRAM.v
+FC:/LABAOC/ModelSim/synthesis/MemoriaRAM.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/ModelSim/synthesis/MemoriaRAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/MemoriaRAM.v|
+!i113 1
+R5
+R6
+n@memoria@dados
+vMemoriaInstrucao
+R1
+!i10b 1
+!s100 iWVn5Sdk9V1c^HAh76;^L2
+Ikf@``a<hMMDgaSRTcW@H:3
+R2
+R0
+w1749675215
+8C:/LABAOC/ModelSim/synthesis/MemoriaInstrucao.v
+FC:/LABAOC/ModelSim/synthesis/MemoriaInstrucao.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/ModelSim/synthesis/MemoriaInstrucao.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/MemoriaInstrucao.v|
+!i113 1
+R5
+R6
+n@memoria@instrucao
+vMux
+R1
+!i10b 1
+!s100 JP@bfW<^=8``fiV4nihBY0
+IO`l=O>`RS6h9SKI1`UN_[2
+R2
+R0
+w1748453579
+8C:/LABAOC/ModelSim/synthesis/Mux.v
+FC:/LABAOC/ModelSim/synthesis/Mux.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/LABAOC/ModelSim/synthesis/Mux.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/Mux.v|
+!i113 1
+R5
+R6
+n@mux
+vProcessadorFinal
+Z7 !s110 1749675919
+!i10b 1
+!s100 7hei_]6DOkeUBSoDRe=CE1
+IR9b?UOGETNTFmm=nVnB@n3
+R2
+R0
+w1749674379
+8C:/LABAOC/ModelSim/synthesis/ProcessadorFinal.v
+FC:/LABAOC/ModelSim/synthesis/ProcessadorFinal.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1749675919.000000
+!s107 C:/LABAOC/ModelSim/synthesis/ProcessadorFinal.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/ProcessadorFinal.v|
+!i113 1
+R5
+R6
+n@processador@final
+vProgramCounter
+R7
+!i10b 1
+!s100 CdM]FX8YP@;=3lVBk4M7W1
+IX:DW0a`XW<eeO<W?;RYh42
+R2
+R0
+w1749674326
+8C:/LABAOC/ModelSim/synthesis/ProgramCounter.v
+FC:/LABAOC/ModelSim/synthesis/ProgramCounter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/LABAOC/ModelSim/synthesis/ProgramCounter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/ProgramCounter.v|
+!i113 1
+R5
+R6
+n@program@counter
+vtestbench_detailed
+R7
+!i10b 1
+!s100 Oc^S79YSGES2CHDL32:HE0
+IBdY1=9jeb<3cEm:0c2z5b2
+R2
+R0
+w1749675361
+8C:/LABAOC/ModelSim/testbenches/implementaca_sem_uc.v
+FC:/LABAOC/ModelSim/testbenches/implementaca_sem_uc.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/LABAOC/ModelSim/testbenches/implementaca_sem_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/testbenches/implementaca_sem_uc.v|
+!i113 1
+R5
+R6
+vteste_so_do_pc
+R7
+!i10b 1
+!s100 3>7IRFm2EPJi2de3^27hi0
+IVGIO04J;53@zYS_;CMMii3
+R2
+R0
+w1749675603
+8C:/LABAOC/ModelSim/simulation/tese_so_do_pc.v
+FC:/LABAOC/ModelSim/simulation/tese_so_do_pc.v
+L0 3
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/LABAOC/ModelSim/simulation/tese_so_do_pc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/simulation/tese_so_do_pc.v|
+!i113 1
+R5
+R6
+vUC_Pilha
+R7
+!i10b 1
+!s100 314Fb;n]n8nU1onWaLQzj2
+Id[ON56PBUndJO[QL_6_YM1
+R2
+R0
+w1749664063
+8C:/LABAOC/ModelSim/synthesis/UCPilha.v
+FC:/LABAOC/ModelSim/synthesis/UCPilha.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/LABAOC/ModelSim/synthesis/UCPilha.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/UCPilha.v|
+!i113 1
+R5
+R6
+n@u@c_@pilha
+vULA
+R7
+!i10b 1
+!s100 0j0aK5Q4dgMe8b8eBG=n22
+Ie[G`^h`gVV]hAPBjc>V?Q0
+R2
+R0
+w1748226741
+8C:/LABAOC/ModelSim/synthesis/ULA.v
+FC:/LABAOC/ModelSim/synthesis/ULA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/LABAOC/ModelSim/synthesis/ULA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/LABAOC/ModelSim/synthesis/ULA.v|
+!i113 1
+R5
+R6
+n@u@l@a

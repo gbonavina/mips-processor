@@ -1,0 +1,85 @@
+C:/LABAOC/ModelSim/synthesis/ExtensorSinal.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/ExtensorSinal.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ExtensorSinal
+
+Top level modules:
+	ExtensorSinal
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/ProcessadorFinal.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/ProcessadorFinal.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ProcessadorFinal
+
+Top level modules:
+	ProcessadorFinal
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/ProgramCounter.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/ProgramCounter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ProgramCounter
+
+Top level modules:
+	ProgramCounter
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/MemoriaRAM.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/MemoriaRAM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MemoriaDados
+
+Top level modules:
+	MemoriaDados
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/Mux.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/Mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Mux
+
+Top level modules:
+	Mux
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/ULA.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/ULA.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ULA
+
+Top level modules:
+	ULA
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/MemoriaInstrucao.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/MemoriaInstrucao.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MemoriaInstrucao
+
+Top level modules:
+	MemoriaInstrucao
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/UCPilha.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/UCPilha.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UC_Pilha
+
+Top level modules:
+	UC_Pilha
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/adder.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} C:/LABAOC/ModelSim/testbenches/implementaca_sem_uc.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/testbenches/implementaca_sem_uc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module testbench_detailed
+
+Top level modules:
+	testbench_detailed
+
+} {} {}} C:/LABAOC/ModelSim/simulation/tese_so_do_pc.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/simulation/tese_so_do_pc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module teste_so_do_pc
+
+Top level modules:
+	teste_so_do_pc
+
+} {} {}} C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v {1 {vlog -work work -stats=none C:/LABAOC/ModelSim/synthesis/BancoDeRegistradores.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BancoDeRegistradores
+
+Top level modules:
+	BancoDeRegistradores
+
+} {} {}}

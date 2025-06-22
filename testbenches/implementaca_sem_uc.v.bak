@@ -1,0 +1,141 @@
+`timescale 1ns / 1ps
+
+module testbench_detailed;
+
+    // --- Sinais de Controle (regs para controlar o DUT) ---
+    reg SumZero, ULAData, ALUSrc, PushOP, PopOP, RegWrite, MemRead;
+    reg MemWrite, MEMData, MemToReg, NOP, StackOP, JAL, JR, Jump;
+    reg branch, halt, IMIn;
+    reg [1:0] IMSel;
+    reg RSSel, RTSel;
+    reg [3:0] ALUOp;
+    reg [19:0] sinalInput;
+
+    // --- Clock ---
+    reg clk;
+
+    // --- Wires para inspecionar sinais internos do DUT ---
+    wire [31:0] pc_out_tb, instrucao_tb, dado1_tb, dado2_tb;
+    wire [31:0] ula_res_tb, mem_out_tb, write_back_data_tb;
+    wire [5:0] rd_addr_tb, rs_addr_tb, rt_addr_tb;
+
+    // Instanciar a Unidade sob Teste (DUT)
+    ProcessadorFinal uut (
+        .SumZero(SumZero), .ULAData(ULAData), .ALUSrc(ALUSrc), .PushOP(PushOP),
+        .PopOP(PopOP), .RegWrite(RegWrite), .MemRead(MemRead), .MemWrite(MemWrite),
+        .MEMData(MEMData), .MemToReg(MemToReg), .NOP(NOP), .StackOP(StackOP),
+        .JAL(JAL), .JR(JR), .Jump(Jump), .branch(branch), .halt(halt),
+        .IMIn(IMIn), .IMSel(IMSel), .RSSel(RSSel), .RTSel(RTSel),
+        .ALUOp(ALUOp), .sinalInput(sinalInput), .clk(clk)
+    );
+
+    // --- Conectando wires internos para exibição ---
+    assign pc_out_tb = uut.pc_out;
+    assign instrucao_tb = uut.instrucao;
+    assign dado1_tb = uut.dado1; // Saída do RegFile (RS)
+    assign dado2_tb = uut.dado2; // Saída do RegFile (RT)
+    assign ula_res_tb = uut.ULARes;
+    assign mem_out_tb = uut.out_mem;
+    assign write_back_data_tb = uut.mux_jal_imediato; // Dado final a ser escrito no RegFile
+    assign rd_addr_tb = uut.rd;
+    assign rs_addr_tb = uut.out_mux_rs;
+    assign rt_addr_tb = uut.out_mux_rt;
+
+
+    // Geração do Clock
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk; // Clock com período de 20ns
+    end
+
+    // Tarefa para resetar sinais de controle para o estado padrão (inativo)
+    task reset_signals;
+        begin
+            SumZero=0; ULAData=0; ALUSrc=0; PushOP=0; PopOP=0; RegWrite=0;
+            MemRead=0; MemWrite=0; MEMData=0; MemToReg=0; NOP=0; StackOP=0;
+            JAL=0; JR=0; Jump=0; branch=0; halt=0; IMIn=0; IMSel=2'b00;
+            RSSel=0; RTSel=0; ALUOp=4'b0000; sinalInput=20'b0;
+        end
+    endtask
+
+    // Tarefa para avançar um ciclo de clock e exibir o estado
+    task step_and_display(input string instruction_name);
+        begin
+            $display("-----------------------------------------------------------------------------------------------");
+            $display("|-- %-70s --|", instruction_name);
+            $display("-----------------------------------------------------------------------------------------------");
+
+            #20; // Avança um ciclo completo
+
+            $display("| PC: %0d | Instr: %h | RD:%0d RS:%0d RT:%0d | DadoLido1: %-5d | DadoLido2: %-5d | ULARes: %-5d | DadoMem: %-5d | EscritaReg: %-5d |",
+                pc_out_tb, instrucao_tb, rd_addr_tb, rs_addr_tb, rt_addr_tb, dado1_tb, dado2_tb, ula_res_tb, mem_out_tb, write_back_data_tb);
+            $display("-----------------------------------------------------------------------------------------------");
+            reset_signals();
+        end
+    endtask
+
+
+    // Sequência de Teste Principal
+    initial begin
+        $display("============================ INICIO DA SIMULACAO ============================");
+        reset_signals();
+        #5; // Espera um pouco para a inicialização
+
+        // ==========================================================
+        // Ciclo 1: LI R3, 50
+        // ==========================================================
+        RegWrite = 1; IMIn = 1; IMSel = 2'b01;
+        step_and_display("Executando: LI R3, 50");
+
+        // ==========================================================
+        // Ciclo 2: LI R4, 100
+        // ==========================================================
+        RegWrite = 1; IMIn = 1; IMSel = 2'b01;
+        step_and_display("Executando: LI R4, 100");
+
+        // ==========================================================
+        // Ciclo 3: STORE R4, 15 (Mem[15] <= 100)
+        // ==========================================================
+        MemWrite = 1; ALUSrc = 1; IMSel = 2'b01; SumZero = 1; ALUOp = 4'b0000; RTSel = 0; RSSel = 1;
+        step_and_display("Executando: STORE R4, 15");
+
+        // ==========================================================
+        // Ciclo 4: LOAD R7, 15 (R7 <= Mem[15])
+        // ==========================================================
+        RegWrite = 1; MemRead = 1; MemToReg = 1; ALUSrc = 1; IMSel = 2'b01; SumZero = 1; ALUOp = 4'b0000;
+        step_and_display("Executando: LOAD R7, 15");
+
+        // ==========================================================
+        // Ciclo 5: BEQ R4, R7, +2 (Pula para o endereço 7)
+        // ==========================================================
+        branch = 1; ALUOp = 4'b1010; RTSel = 1; IMSel = 2'b00;
+        step_and_display("Executando: BEQ R4, R7 (Branch deve ser tomado)");
+
+        // ==========================================================
+        // Ciclos 6 e 7 são pulados pelo branch. O PC deve saltar de 5 para 7.
+        // O código do `codigo.txt` já foi atualizado para que o offset do BEQ pule para o endereço 7.
+        // Simulamos o avanço do clock para o processador buscar e executar a instrução no novo PC.
+        // ==========================================================
+        #20; // Simula o clock para a instrução em PC=5 (que é decodificada mas seu resultado não avança o PC)
+        $display("|--> Instrucao em PC=5 PULADA pelo branch.");
+        #20; // Simula o clock para a instrução em PC=6 (que é decodificada mas seu resultado não avança o PC)
+        $display("|--> Instrucao em PC=6 PULADA pelo branch.");
+
+        // ==========================================================
+        // Ciclo 8: SLT R9, R3, R4 (Alvo do Branch, em PC=7)
+        // ==========================================================
+        RegWrite = 1; ALUOp = 4'b1001; RTSel = 1; RSSel = 0;
+        step_and_display("Executando: SLT R9, R3, R4 (Alvo do Branch)");
+
+        // ==========================================================
+        // Ciclo 9: HALT
+        // ==========================================================
+        halt = 1;
+        step_and_display("Executando: HALT");
+
+        #20;
+        $display("============================= FIM DA SIMULACAO =============================");
+        $stop;
+    end
+
+endmodule

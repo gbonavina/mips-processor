@@ -1,0 +1,10 @@
+module Mux7b(a, b, s, out);
+    input [6:0] a;
+    input [6:0] b;
+    input s;
+
+    output [6:0] out;
+
+    assign out = s ? b : a;
+
+endmodule
