@@ -16,7 +16,7 @@ module BancoDeRegistradores(RS, RT, RD, SPIn, DadoEscrito, RegWrite, NOP, StackO
 	output [31:0]dado2;
 	output reg [31:0]SPOut;
 	
-	reg[63:0] regs[31:0];
+	reg[31:0] regs[63:0];
 	
 	parameter Zero = 6'd0;
 	parameter ra   = 6'd1;

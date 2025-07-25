@@ -24,8 +24,7 @@ module UnidadeControle(
     output reg [1:0] IMSel,
     output reg [3:0] ALUOp,
     output reg input_request,
-	 output reg IOE,
-	 output reg IOSel
+    output reg OutOP
 );
 
     always @ (*) begin
@@ -51,10 +50,7 @@ module UnidadeControle(
         MemRead   = 1'b0;
         MemToReg  = 1'b0;
         IMSel     = 2'b00;
-        input_request = 1'b0;
         ALUOp     = 4'b0000;
-        IOE = 1'b0; 
-        IOSel = 1'b0;
 
         case (opcode)
             // add
@@ -110,7 +106,7 @@ module UnidadeControle(
             6'b010011: begin
                 ALUOp    = 4'b0000;
                 RegWrite = 1'b1;
-                IMSel    = 2'b10;
+                IMSel    = 2'b00;
                 ALUSrc   = 1'b1;
             end
             
@@ -246,7 +242,6 @@ module UnidadeControle(
                 RegWrite = 1'b1;
                 IMSel    = 2'b01;
                 ALUSrc   = 1'b1;
-                IMIn     = 1'b1;
             end
             
             // lw (load word)
@@ -263,7 +258,7 @@ module UnidadeControle(
             6'b001011: begin
                 SumZero  = 1'b1;
                 RSSel    = 1'b1;
-                IMSel    = 2'b01;   
+                IMSel    = 2'b01;
                 ALUSrc   = 1'b1;
                 MemWrite = 1'b1;
             end
@@ -346,17 +341,12 @@ module UnidadeControle(
                 input_request = 1'b1; // Solicita entrada do usuário
                 IMIn          = 1'b1; // Habilita entrada imediata
                 RegWrite      = 1'b1; // Habilita escrita no registrador
-                // IMSel         = 2'b11; // Seleciona o sinal de entrada
-                IOE = 1'b1;
-                IOSel = 1'b1;
+                IMSel         = 2'b11; // Seleciona o sinal de entrada
             end
 
             // OUT
             6'b011100: begin
-                OutOP = 1'b1;
-                RSSel = 1'b1;
-			    NOP   = 1'b0;
-                IOE = 1'b1;
+                OutOP = 1'b1
             end
 
             // HLT (halt)

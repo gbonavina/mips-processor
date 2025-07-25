@@ -14,55 +14,6 @@ module ProcessadorFinal(
      output [6:0] display6,
      output [6:0] display7,
      output [6:0] display8
-    
-    // --- Outputs para visualização na waveform ---
-    // PC e Memória de Instruções
-//    output [31:0] debug_pc_in,
-//     output [31:0] debug_pc_out,
-//    output [31:0] debug_instrucao,
-    
-//    // MUXes importantes
-//    output [31:0] debug_mux_zero_dado1,
-//    output [31:0] debug_mux_dado_ula,
-//    output [31:0] debug_mux_imediato_dado2,
-//    output [31:0] debug_mux_mem_ULA,
-//    output [31:0] debug_mux_jal_imediato,
-//    output [31:0] debug_mux_pc_jump,
-//    
-    // Banco de Registradores
-//     output [31:0] debug_dado1,
-//     output [31:0] debug_dado2,
-//    output [31:0] debug_SPOut,
-//     output [5:0] debug_rs,
-//     output [5:0] debug_rt,
-//     output [5:0] debug_rd,
-    
-    // ULA
-//    output [31:0] debug_ULARes,
-//    output debug_Zero,
-    
-    // Somadores
-//    output [31:0] debug_pc_plus_one,
-//    output [31:0] debug_pc_if_branch,
-    
-    // Extensor de Sinal
-//     output [31:0] debug_sinalEstendido,
-    
-    // Sinais de controle principais
-//    output debug_RegWrite,
-//    output debug_MemRead,
-//    output debug_MemWrite,
-//    output debug_Jump,
-//    output debug_branch,
-//    output [3:0] debug_ALUOp,
-//     output [31:0] d_stored_value,
-//     output d_halt_ES,
-//     output [31:0] d_saida_dado,
-//     output d_IOE,
-//     output d_IOSel,
-//     output d_OutOP,
-     // output d_clock_div,
-     // output d_debounce_confirm
     );
     //================================================================
     // SINAIS INTERNOS (WIRES)
@@ -150,47 +101,6 @@ module ProcessadorFinal(
      wire [31:0] stored_value;
 
      wire ok;
-
-    // Conectar sinais internos aos outputs para visualização
-//    assign debug_pc_in = pc_in;
-//     assign debug_pc_out = pc_out;
-//    assign debug_instrucao = instrucao;
-    
-//    assign debug_mux_zero_dado1 = mux_zero_dado1;
-//    assign debug_mux_dado_ula = mux_dado_ula;
-//    assign debug_mux_imediato_dado2 = mux_imediato_dado2;
-//    assign debug_mux_mem_ULA = mux_mem_ULA;
-//    assign debug_mux_jal_imediato = mux_jal_imediato;
-//    assign debug_mux_pc_jump = mux_pc_jump;
-    
-//     assign debug_dado1 = dado1;
-//     assign debug_dado2 = dado2;
-//    assign debug_SPOut = SPOut;
-//     assign debug_rs = out_mux_rs;
-//     assign debug_rt = out_mux_rt;
-//     assign debug_rd = rd;
-    
-//    assign debug_ULARes = ULARes;
-//    assign debug_Zero = Zero;
-    
-//    assign debug_pc_plus_one = pc_plus_one;
-//    assign debug_pc_if_branch = pc_if_branch;
-//     assign d_halt_ES = input_request;
-//     assign debug_sinalEstendido = sinalEstendido;
-    
-//    assign debug_RegWrite = RegWrite;
-//    assign debug_MemRead = MemRead;
-//    assign debug_MemWrite = MemWrite;
-//    assign debug_Jump = Jump;
-//    assign debug_branch = Branch;
-//    assign debug_ALUOp = ALUOp;
-//     assign d_stored_value = stored_value;
-// 	 assign d_OutOP = OutOP;
-//       assign d_saida_dado = saida_dado;
-//       assign d_IOE = IOE;
-//       assign d_IOSel = IOSel;
-//       assign d_clock_div = clk;
-//       assign d_debounce_confirm = confirm;
 
      //================================================================
      // DIVISOR DE FREQUÊNCIA

@@ -2,9 +2,6 @@
 // Simple Dual Port RAM with separate read/write addresses and
 // single read/write clock
 
-
-// falta a pilha -> fazer uc pilha no pc3; 
-
 module MemoriaDados
 #(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=7) 
 (
@@ -24,6 +21,6 @@ module MemoriaDados
 
 	end
     
-    assign out = MemRead ? ram[endereco] : 32'd0;
+    assign out = ram[endereco];
 
 endmodule
